@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@push('css')
+    
+@endpush
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -14,10 +18,14 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <a href="{{ route('usuarios.index') }}" class="btn btn-primary btn-sm shadow">Usuarios</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
+@push('js')
+
+@endpush
